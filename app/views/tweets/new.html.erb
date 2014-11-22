@@ -2,3 +2,13 @@
   <%= f.input :tweet %>
   <%= f.button :submit %>
 <% end %>
+
+<br>
+
+Here are all tweets: <br><br>
+
+<ul>
+	<% @tweets.each do |tweet| %>
+		<li><%= tweet.tweet %></li>
+	<% end %>
+<ul>
