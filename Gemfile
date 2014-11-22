@@ -40,6 +40,7 @@ gem 'spring',        group: :development
 
 gem 'devise'
 
+gem 'carrierwave'
 
 gem 'simple_form'
 
