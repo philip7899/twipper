@@ -1,9 +1,12 @@
 <div class="container">
-	<div class="jumbotron" style="opacity: 0.8; width: 70%; margin-left: auto; margin-right: auto;">
+	<div class="jumbotron" style="opacity: 0.85; width: 70%; margin-left: auto; margin-right: auto;">
 		<div style="width: 95%; margin-left: auto; margin-right: auto;">
 		  	<h1>Welcome to Twipper!</h1>
 		  	<p>Twitter for Tufts!</p>
-		  	<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-		  </div>
+		  	<p>
+		  		<%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary btn-lg', role: 'button' %>
+		  		
+		  	</p>
+		</div>
 	</div>
 </div>
