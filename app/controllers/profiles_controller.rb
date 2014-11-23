@@ -1,5 +1,8 @@
 class ProfilesController < ApplicationController
 	def new
+		if current_user.profile
+			redirect_to profile_path(current_user.profile)
+		end
 		@profile = Profile.new
 	end
 
@@ -8,7 +11,7 @@ class ProfilesController < ApplicationController
 		@profile.user = current_user
 		if @profile.save
 			flash[:success] = "Profile succesfully created"
-			redirect_to profile_path(current_user)
+			redirect_to profile_path(current_user.profile)
 		else
 			flash.now[:danger] = "Please fix the errors below."
 			render 'new'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141122223919) do
+ActiveRecord::Schema.define(version: 20141123160553) do
 
   create_table "profiles", force: true do |t|
     t.integer  "user_id"
