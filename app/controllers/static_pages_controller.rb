@@ -6,6 +6,6 @@ class StaticPagesController < ApplicationController
 
 	def generate_pdf
 		#render 'main_page'
-		render_pdf :template => 'main_page', :send_file => { :filename => 'bar.pdf' }
+		render_pdf :template => 'static_pages/main_page', :send_file => { :filename => 'bar.pdf' }
 	end
 end
