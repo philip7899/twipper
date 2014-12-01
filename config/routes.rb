@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   get 'h/:hash_tag_id', to: 'hashtags#show', as: :hash_tag
   #resources :hashtags, only: [:show]
-
+  get 'generatepdf', to: 'static_pages#generate_pdf', as: :generate_pdf
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

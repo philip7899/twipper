@@ -27,6 +27,9 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    acts_as_flying_saucer (1.0.4)
+      nailgun
+      tidy_ffi
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
     builder (3.2.2)
@@ -50,6 +53,7 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.2.2)
+    ffi (1.2.1)
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (2.2.5)
@@ -64,6 +68,7 @@ GEM
     mime-types (2.4.3)
     minitest (5.4.3)
     multi_json (1.10.1)
+    nailgun (0.0.3)
     orm_adapter (0.5.0)
     pg (0.17.1)
     rack (1.5.2)
@@ -117,6 +122,8 @@ GEM
     sqlite3 (1.3.10)
     thor (0.19.1)
     thread_safe (0.3.4)
+    tidy_ffi (0.1.5)
+      ffi (~> 1.2.0)
     tilt (1.4.1)
     turbolinks (2.5.2)
       coffee-rails
@@ -137,6 +144,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_flying_saucer
   carrierwave
   coffee-rails (~> 4.0.0)
   devise
