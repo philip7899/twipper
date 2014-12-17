@@ -64,7 +64,14 @@
   <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
-
+  <div style="color: white;">
+    Mac <%= browser.mac? %>
+    Browser name <%= browser.name %><br />
+    Browser version <%= browser.full_version %><br />
+    Safari <%= browser.safari? %><br />
+    Mobile <%= browser.mobile? %><br />
+    Tablet <%= browser.tablet? %><br />
+  </div>
 <%= yield %>
 
 </body>

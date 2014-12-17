@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get 'generatepdf', to: 'static_pages#generate_pdf', as: :generate_pdf
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-
+  get ':number', to: 'static_pages#number', as: :number
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

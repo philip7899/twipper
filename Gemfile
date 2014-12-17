@@ -1,6 +1,13 @@
 source 'https://rubygems.org'
 
 
+gem 'pdfkit'
+
+#different way of doing pdf's:
+
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+gem 'browser'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
