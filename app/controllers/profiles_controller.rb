@@ -23,6 +23,8 @@ class ProfilesController < ApplicationController
 
 	def show
 		@profile = Profile.find(params[:id])
+		@tweets = Tweet.all.reject {|tweet| tweet.user == current_user}
+		@relationship = Relationship.new
 	end
 
 	def profile_params
