@@ -1,7 +1,13 @@
 class StaticPagesController < ApplicationController
-	acts_as_flying_saucer
+
 	def main_page
-		@variable = "yolo"
+		if user_signed_in?
+			if current_user.profile
+				redirect_to profile_path(current_user.profile)
+			else
+				redirect_to new_profile_path
+			end
+		end
 	end
 
 	def generate_pdf

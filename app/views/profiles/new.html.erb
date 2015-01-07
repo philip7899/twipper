@@ -1,8 +1,21 @@
 New profile form
+<div class="container">
+	<div class="jumbotron" id="new-profile-jumbotron">
+		<%= simple_form_for @profile, defaults: {input_html: {role: 'form'}} do |f| %>
+			<div class="form-group">
+				<label for='profile-picture-upload'>
+					Description
+				</label>
+				<%= f.input_field :description, class: 'form-control', placeholder: "Tell us about you" %>
+			</div>
+			<div class="form-group">
+				<label for='profile-picture-upload'>
+					Profile Picture
+				</label>
+				<%= f.input_field :pic, class: 'form-control', id: 'profile-picture-upload' %>
+			</div>
+			<%= f.button :submit, class: 'btn btn-default' %>
 
-<%= simple_form_for @profile do |f| %>
-	<%= f.input :description %>
-	<%= f.input :pic %>
-	<%= f.button :submit %>
-
-<% end %>
+		<% end %>
+	</div>
+</div>

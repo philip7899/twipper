@@ -12,13 +12,15 @@
   <body class="functionality_page">
 <% end %>
 
-<%= render 'layouts/navbar' %>
-  <div class="container">
-    <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-    <% end %>
-  </div>
-  <%= yield %>
+    <%= render 'layouts/navbar' %>
+      <div class="container">
+        <% flash.each do |key, value| %>
+            <% if !value.blank? %>
+              <div class="alert alert-<%= key %>"><%= value %></div>
+            <% end %>
+        <% end %>
+      </div>
+      <%= yield %>
 
-</body>
+  </body>
 </html>
