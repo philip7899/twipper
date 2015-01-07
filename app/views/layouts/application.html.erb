@@ -13,13 +13,15 @@
 <% end %>
 
     <%= render 'layouts/navbar' %>
-      <div class="container">
-        <% flash.each do |key, value| %>
-            <% if !value.blank? %>
-              <div class="alert alert-<%= key %>"><%= value %></div>
-            <% end %>
-        <% end %>
-      </div>
+      <%if flash.any? %>
+        <div class="container lower_flash">
+          <% flash.each do |key, value| %>
+              <% if !value.blank? %>
+                <div class="alert alert-<%= key %>"><%= value %></div>
+              <% end %>
+          <% end %>
+        </div>
+      <% end %>
       <%= yield %>
 
   </body>
